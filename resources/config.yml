@@ -1,0 +1,15 @@
+# Customize the messages and titles shown when healing and feeding
+
+feed_message: "You have been fed!"
+feed_title: "Feed Title"
+feed_subtitle: "Feed Subtitle"
+feed_title_fade_in: 10
+feed_title_stay: 40
+feed_title_fade_out: 10
+
+heal_message: "You have been healed!"
+heal_title: "Heal Title"
+heal_subtitle: "Heal Subtitle"
+heal_title_fade_in: 10
+heal_title_stay: 40
+heal_title_fade_out: 10

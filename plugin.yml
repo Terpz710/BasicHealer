@@ -1,0 +1,14 @@
+name: BasicHealer
+version: 1.0.0
+api: [5.0.0]
+main: Terpz710\BasicHealer\Main
+author: Terpz710
+description: Heal and feed yourself with custom messages and titles.
+
+permissions:
+  basichealer.feed:
+    description: Allows players to use the /feed command for feeding themselves.
+    default: op
+  basichealer.heal:
+    description: Allows players to use the /heal command for healing themselves.
+    default: op
