@@ -1,6 +1,6 @@
 <p align="center">
-    <a href
-    "https://github.com/Terpz710/HealFeed"><img src= "https://github.com/Terpz710/HealFeed/blob/main/icon.png"></img></a><br>
+    <a href=
+"https://github.com/Terpz710/BasicHealer"><img src= "https://github.com/Terpz710/BasicHealer/blob/main/icon.png"></img></a><br>
     <b>HealFeed plugin for Pocketmine-MP</b>
 </p>
 
