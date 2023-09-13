@@ -4,8 +4,8 @@ namespace Terpz710\BasicHealer;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use Terpz710\Commands\FeedCommand;
-use Terpz710\Commands\HealCommand;
+use Terpz710\BasicHealer\Commands\FeedCommand;
+use Terpz710\BasicHealer\Commands\HealCommand;
 
 class Main extends PluginBase {
 
