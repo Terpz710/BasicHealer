@@ -6,7 +6,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
-use Terpz710\Main;
+use Terpz710\BasicHeal\Main;
 
 class HealCommand extends Command {
 
