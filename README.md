@@ -1,7 +1,7 @@
 <p align="center">
     <a href=
 "https://github.com/Terpz710/BasicHealer"><img src= "https://github.com/Terpz710/BasicHealer/blob/main/icon.png"></img></a><br>
-    <b>HealFeed plugin for Pocketmine-MP</b>
+    <b>BasicHealer plugin for Pocketmine-MP</b>
 </p>
 
 # Description
@@ -9,9 +9,9 @@ When a player does /heal or /feed it will set their heart/food status to full. I
 
 # Permissions
 
-Heal: healfeed.heal
+Heal: basichealer.heal
 
-Feed: healfeed.feed
+Feed: basichealer.feed
 
 # Future updates
 
