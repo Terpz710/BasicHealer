@@ -15,9 +15,9 @@ Feed: basichealer.feed
 
 # Future updates
 
-Add more messages such as when a player is already full hearts/hunger.
+- [x] Add more messages such as when a player is already full hearts/hunger.
 
-Implentation of fly.
+- [x] Implentation of fly (Made a seperate plugin for it)
 
 Got a suggestion feel free to DM!
 
