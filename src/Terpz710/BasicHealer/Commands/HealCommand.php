@@ -45,7 +45,7 @@ class HealCommand extends Command {
                 $this->config->get("heal_title_stay"),
                 $this->config->get("heal_title_fade_out")
             );
-            $healMessage = $this->config->get("heal_message", "§f(§a!§f) You have been §ehealed§f!");
+            $healMessage = $this->config->get("heal_message", "§l§f(§a!§f)§r§f You have been §ehealed§f!");
             if ($healMessage !== null) {
                 $sender->sendMessage($healMessage);
             }
