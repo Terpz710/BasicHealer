@@ -15,7 +15,7 @@ class HealCommand extends Command {
     
     private $config;
 
-    public function __construct(Plugin $plugin, Config $config) {
+    public function __construct(Config $config) {
         parent::__construct("heal", "Heal yourself");
         $this->config = $config;
         $this->setPermission("basichealer.heal");
