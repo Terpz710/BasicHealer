@@ -18,7 +18,7 @@ class FeedCommand extends Command implements PluginOwned {
     private $plugin;
     private $config;
 
-    public function __construct(Config $config) {
+    public function __construct(Plugin $plugin, Config $config) {
         parent::__construct("feed", "Feed yourself");
         $this->config = $config;
         $this->plugin = $plugin;
