@@ -3,7 +3,7 @@
 # Feed section:
 
 # Feed message
-feed_message: "§f(§a!§f) You have been §efed§f!"
+feed_message: "§l§f(§a!§f)§r§f You have been §efed§f!"
 
 # Feed title message
 feed_title: "§b§lRejuvenated"
@@ -19,7 +19,7 @@ feed_title_fade_out: 10
 # Heal section:
 
 # Heal message
-heal_message: "§f(§a!§f) You have been §ehealed§f!"
+heal_message: "§l§f(§a!§f)§r§f You have been §ehealed§f!"
 
 # Heal title message
 heal_title: "§b§lRejuvenated"
