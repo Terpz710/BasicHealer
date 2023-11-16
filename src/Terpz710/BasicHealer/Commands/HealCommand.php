@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginOwned;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
-use Terpz710\BasicHealer\Main;
+use Terpz710\BasicHealer\Main as Plugin;
 
 class HealCommand extends Command implements PluginOwned {
 
