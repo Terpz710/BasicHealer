@@ -6,23 +6,31 @@ namespace Terpz710\BasicHealer\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
-use Terpz710\BasicHealer\Main;
+use Terpz710\BasicHealer\Main as Plugin;
 
-class FeedCommand extends Command {
+class FeedCommand extends Command implements PluginOwned {
 
+    /** @var Plugin */
+    private $plugin;
     private $config;
 
-    public function __construct(Config $config) {
+    public function __construct(Plugin $plugin, Config $config) {
         parent::__construct("feed", "Feed yourself");
         $this->config = $config;
+        $this->plugin = $plugin;
         $this->setPermission("basichealer.feed");
     }
 
+    public function getOwningPlugin(): Plugin {
+        return $this->plugin;
+    }
+
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
-        
+
         if (!$sender instanceof Player) {
             $sender->sendMessage("This command can only be used by players.");
             return true;
@@ -46,10 +54,13 @@ class FeedCommand extends Command {
                 $this->config->get("feed_title_stay"),
                 $this->config->get("feed_title_fade_out")
             );
-            $feedMessage = $this->config->get("feed_message", "§l§f(§a!§f)§r§f You have been §efed§f!");
+            $feedMessage = $this->config->get("feed_message", "§f(§a!§f) You have been §bfed§f!");
             if ($feedMessage !== null) {
                 $sender->sendMessage($feedMessage);
             }
+        } else {
+            $fullFeedMessage = $this->config->get("full_feed_message", "§l§f(§c!§f)§r§f You are not hungry!");
+            $sender->sendMessage($fullFeedMessage);
         }
 
         return true;
