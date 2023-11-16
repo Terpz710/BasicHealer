@@ -1,21 +1,32 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Terpz710\BasicHealer\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
+
 use Terpz710\BasicHealer\Main;
 
-class HealCommand extends Command {
+class HealCommand extends Command implements PluginOwned {
 
+    /** @var Plugin */
+    private $plugin;
     private $config;
 
-    public function __construct(Config $config) {
+    public function __construct(Plugin $plugin, Config $config) {
         parent::__construct("heal", "Heal yourself");
         $this->config = $config;
+        $this->plugin = $plugin;
         $this->setPermission("basichealer.heal");
+    }
+
+    public function getOwningPlugin(): Plugin {
+        return $this->plugin;
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
@@ -26,7 +37,7 @@ class HealCommand extends Command {
         }
 
         if (!$sender->hasPermission("basichealer.heal")) {
-            $sender->sendMessage("You don't have permission to use this command.");
+            $sender->sendMessage("§cYou don't have permission to use this command!");
             return true;
         }
 
@@ -42,7 +53,7 @@ class HealCommand extends Command {
                 $this->config->get("heal_title_stay"),
                 $this->config->get("heal_title_fade_out")
             );
-            $healMessage = $this->config->get("heal_message", "You have been healed!");
+            $healMessage = $this->config->get("heal_message", "§f(§a§f) You have been §bhealed§f!");
             if ($healMessage !== null) {
                 $sender->sendMessage($healMessage);
             }
