@@ -6,27 +6,19 @@ namespace Terpz710\BasicHealer\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\plugin\PluginOwned;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
-use Terpz710\BasicHealer\Main as Plugin;
+use Terpz710\BasicHealer\Main;
 
 class FeedCommand extends Command implements PluginOwned {
 
-    /** @var Plugin */
-    private $plugin;
     private $config;
 
     public function __construct(Plugin $plugin, Config $config) {
         parent::__construct("feed", "Feed yourself");
         $this->config = $config;
-        $this->plugin = $plugin;
         $this->setPermission("basichealer.feed");
-    }
-
-    public function getOwningPlugin(): Plugin {
-        return $this->plugin;
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
