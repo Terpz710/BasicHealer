@@ -11,11 +11,11 @@ use pocketmine\utils\Config;
 
 use Terpz710\BasicHealer\Main;
 
-class FeedCommand extends Command implements PluginOwned {
+class FeedCommand extends Command {
 
     private $config;
 
-    public function __construct(Plugin $plugin, Config $config) {
+    public function __construct(Config $config) {
         parent::__construct("feed", "Feed yourself");
         $this->config = $config;
         $this->setPermission("basichealer.feed");
