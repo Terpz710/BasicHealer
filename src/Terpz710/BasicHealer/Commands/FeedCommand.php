@@ -1,21 +1,31 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Terpz710\BasicHealer\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
+
 use Terpz710\BasicHealer\Main;
 
-class FeedCommand extends Command {
+class FeedCommand extends Command implements PluginOwned {
 
+    /** @var Plugin */
+    private $plugin;
     private $config;
 
     public function __construct(Config $config) {
         parent::__construct("feed", "Feed yourself");
         $this->config = $config;
+        $this->plugin = $plugin;
         $this->setPermission("basichealer.feed");
+    }
+
+    public function getOwningPlugin(): Plugin {
+        return $this->plugin;
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
@@ -26,7 +36,7 @@ class FeedCommand extends Command {
         }
 
         if (!$sender->hasPermission("basichealer.feed")) {
-            $sender->sendMessage("You don't have permission to use this command.");
+            $sender->sendMessage("§cYou don't have permission to use this command!");
             return true;
         }
 
@@ -43,7 +53,7 @@ class FeedCommand extends Command {
                 $this->config->get("feed_title_stay"),
                 $this->config->get("feed_title_fade_out")
             );
-            $feedMessage = $this->config->get("feed_message", "You have been fed!");
+            $feedMessage = $this->config->get("feed_message", "§f(§a!§f) You have been §bfed§f!");
             if ($feedMessage !== null) {
                 $sender->sendMessage($feedMessage);
             }
