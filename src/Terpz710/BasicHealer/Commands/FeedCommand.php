@@ -59,8 +59,8 @@ class FeedCommand extends Command implements PluginOwned {
                 $sender->sendMessage($feedMessage);
             }
         } else {
-            $fullFeedMessage = $this->config->get("full_feed_message", "§l§f(§c!§f)§r§f You are not hungry!");
-            $sender->sendMessage($fullFeedMessage);
+            $fullHungerMessage = $this->config->get("full_hunger_message", "§l§f(§c!§f)§r§f You are not hungry!");
+            $sender->sendMessage($fullHungerMessage);
         }
 
         return true;
