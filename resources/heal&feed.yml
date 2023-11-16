@@ -5,6 +5,9 @@
 # Feed message
 feed_message: "§l§f(§a!§f)§r§f You have been §efed§f!"
 
+# Full hunger message
+full_health_message: "§l§f(§c!§f)§r§f You are not hungry!"
+
 # Feed title message
 feed_title: "§b§lRejuvenated"
 
@@ -21,6 +24,9 @@ feed_title_fade_out: 10
 # Heal message
 heal_message: "§l§f(§a!§f)§r§f You have been §ehealed§f!"
 
+# Full health message
+full_health_message: "§l§f(§c!§f)§r§f You already have full health!"
+
 # Heal title message
 heal_title: "§b§lRejuvenated"
 
@@ -31,3 +37,5 @@ heal_subtitle: "Health restored!"
 heal_title_fade_in: 10
 heal_title_stay: 40
 heal_title_fade_out: 10
+
+
