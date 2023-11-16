@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Terpz710\BasicHealer\Commands;
 
 use pocketmine\command\Command;
@@ -29,7 +27,7 @@ class FeedCommand extends Command {
         }
 
         if (!$sender->hasPermission("basichealer.feed")) {
-            $sender->sendMessage("§cYou don't have permission to use this command!");
+            $sender->sendMessage("You don't have permission to use this command.");
             return true;
         }
 
@@ -46,7 +44,7 @@ class FeedCommand extends Command {
                 $this->config->get("feed_title_stay"),
                 $this->config->get("feed_title_fade_out")
             );
-            $feedMessage = $this->config->get("feed_message", "§f(§a!§f) You have been §bfed§f!");
+            $feedMessage = $this->config->get("feed_message", "You have been fed!");
             if ($feedMessage !== null) {
                 $sender->sendMessage($feedMessage);
             }
