@@ -46,7 +46,7 @@ class FeedCommand extends Command {
                 $this->config->get("feed_title_stay"),
                 $this->config->get("feed_title_fade_out")
             );
-            $feedMessage = $this->config->get("feed_message", "§f(§a!§f) You have been §efed§f!");
+            $feedMessage = $this->config->get("feed_message", "§l§f(§a!§f)§r§f You have been §efed§f!");
             if ($feedMessage !== null) {
                 $sender->sendMessage($feedMessage);
             }
