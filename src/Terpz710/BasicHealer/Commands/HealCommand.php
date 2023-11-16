@@ -12,7 +12,7 @@ use pocketmine\utils\Config;
 use Terpz710\BasicHealer\Main;
 
 class HealCommand extends Command {
-    
+
     private $config;
 
     public function __construct(Config $config) {
@@ -45,7 +45,7 @@ class HealCommand extends Command {
                 $this->config->get("heal_title_stay"),
                 $this->config->get("heal_title_fade_out")
             );
-            $healMessage = $this->config->get("heal_message", "§f(§a§f) You have been §bhealed§f!");
+            $healMessage = $this->config->get("heal_message", "§f(§a§f) You have been §ehealed§f!");
             if ($healMessage !== null) {
                 $sender->sendMessage($healMessage);
             }
