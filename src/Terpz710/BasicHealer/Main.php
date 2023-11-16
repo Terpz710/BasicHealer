@@ -12,9 +12,6 @@ use Terpz710\BasicHealer\Commands\HealCommand;
 
 class Main extends PluginBase {
 
-    /** @var Config */
-    private $config;
-
     public function onEnable(): void {
         $this->saveResource("heal&feed.yml");
         $this->config = new Config($this->getDataFolder() . "heal&feed.yml", Config::YAML);
