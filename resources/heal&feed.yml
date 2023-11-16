@@ -1,0 +1,33 @@
+# Terpz710 waz here :p
+
+# Feed section:
+
+# Feed message
+feed_message: "§f(§a!§f) You have been §efed§f!"
+
+# Feed title message
+feed_title: "§b§lRejuvenated"
+
+# Feed subtitle message
+feed_subtitle: "You have been fed!"
+
+# Feed title duration time
+feed_title_fade_in: 10
+feed_title_stay: 40
+feed_title_fade_out: 10
+
+# Heal section:
+
+# Heal message
+heal_message: "§f(§a!§f) You have been §ehealed§f!"
+
+# Heal title message
+heal_title: "§b§lRejuvenated"
+
+# Heal subtitle message
+heal_subtitle: "Health restored!"
+
+# Heal title duration time
+heal_title_fade_in: 10
+heal_title_stay: 40
+heal_title_fade_out: 10
