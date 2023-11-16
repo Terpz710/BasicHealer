@@ -14,8 +14,8 @@ class Main extends PluginBase {
     private $config;
 
     public function onEnable(): void {
-        $this->saveResource("config.yml");
-        $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+        $this->saveResource("heal&feed.yml");
+        $this->config = new Config($this->getDataFolder() . "heal&feed.yml", Config::YAML);
 
         $this->getServer()->getCommandMap()->register("feed", new FeedCommand($this->config));
         $this->getServer()->getCommandMap()->register("heal", new HealCommand($this->config));
