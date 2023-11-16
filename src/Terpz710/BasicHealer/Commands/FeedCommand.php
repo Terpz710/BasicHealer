@@ -6,6 +6,7 @@ namespace Terpz710\BasicHealer\Commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
