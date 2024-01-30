@@ -32,12 +32,12 @@ class FeedCommand extends Command implements PluginOwned {
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
 
         if (!$sender instanceof Player) {
-            $sender->sendMessage("not_ingame_feed");
+            $sender->sendMessage($this->config->get("not_ingame_feed"));
             return true;
         }
 
-        if (!$sender->hasPermission("basichealer.feed")) {
-            $sender->sendMessage("no_permission_feed");
+        if (!$sender->hasPermission("basichealer.feed") {
+            $sender->sendMessage($this->config->get("no_permission_feed"));
             return true;
         }
 
