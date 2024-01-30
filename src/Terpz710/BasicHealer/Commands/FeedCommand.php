@@ -32,7 +32,7 @@ class FeedCommand extends Command implements PluginOwned {
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
 
         if (!$sender instanceof Player) {
-            $sender->sendMessage("This command can only be used by players.");
+            $sender->sendMessage("not_ingame_feed");
             return true;
         }
 
