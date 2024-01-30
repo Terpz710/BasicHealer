@@ -37,7 +37,7 @@ class FeedCommand extends Command implements PluginOwned {
         }
 
         if (!$sender->hasPermission("basichealer.feed")) {
-            $sender->sendMessage("no_permission");
+            $sender->sendMessage("no_permission_feed");
             return true;
         }
 
