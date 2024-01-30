@@ -37,7 +37,7 @@ class HealCommand extends Command implements PluginOwned {
         }
 
         if (!$sender->hasPermission("basichealer.heal")) {
-            $sender->sendMessage("§cYou don't have permission to use this command!");
+            $sender->sendMessage("no_permission_health");
             return true;
         }
 
@@ -53,12 +53,12 @@ class HealCommand extends Command implements PluginOwned {
                 $this->config->get("heal_title_stay"),
                 $this->config->get("heal_title_fade_out")
             );
-            $healMessage = $this->config->get("heal_message", "§f(§a!§f) You have been §bhealed§f!");
+            $healMessage = $this->config->get("heal_message");
             if ($healMessage !== null) {
                 $sender->sendMessage($healMessage);
             }
         } else {
-            $fullHealthMessage = $this->config->get("full_health_message", "§l§f(§c!§f)§r§f You already have full health!");
+            $fullHealthMessage = $this->config->get("full_health_message");
             $sender->sendMessage($fullHealthMessage);
         }
 
