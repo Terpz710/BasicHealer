@@ -7,10 +7,11 @@ namespace Terpz710\BasicHealer\Commands;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginOwned;
+use pocketmine\plugin\Plugin;
 use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
-use Terpz710\BasicHealer\Main as Plugin;
+use Terpz710\BasicHealer\Main;
 
 class HealCommand extends Command implements PluginOwned {
 
@@ -32,7 +33,7 @@ class HealCommand extends Command implements PluginOwned {
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
 
         if (!$sender instanceof Player) {
-            $sender->sendMessage("This command can only be used by players.");
+            $sender->sendMessage("not_ingame_health");
             return true;
         }
 
