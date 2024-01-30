@@ -1,7 +1,10 @@
 # Terpz710 waz here :p
 
-# No permission message
-no_permission: "§cYou dont have permission!"
+# No permission message for Feed
+no_permission_feed: "§cYou dont have permission!"
+
+# No permission message for Health
+no_permission_health: "§cYou dont have permission!"
 
 # Feed section:
 
