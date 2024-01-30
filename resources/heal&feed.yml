@@ -1,12 +1,12 @@
 # Terpz710 waz here :p
 
+# Feed section:
+
+# User try to send command through console message for Feed
+not_ingame_feed: "§cRun this command in-game!"
+
 # No permission message for Feed
 no_permission_feed: "§cYou dont have permission!"
-
-# No permission message for Health
-no_permission_health: "§cYou dont have permission!"
-
-# Feed section:
 
 # Feed message
 feed_message: "§l§f(§a!§f)§r§f You have been §efed§f!"
@@ -26,6 +26,12 @@ feed_title_stay: 40
 feed_title_fade_out: 10
 
 # Heal section:
+
+# User try to send command through console message for Health
+not_ingame_health: "§cRun this command in-game!"
+
+# No permission message for Health
+no_permission_health: "§cYou dont have permission!"
 
 # Heal message
 heal_message: "§l§f(§a!§f)§r§f You have been §ehealed§f!"
