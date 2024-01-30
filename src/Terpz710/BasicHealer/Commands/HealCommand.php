@@ -33,12 +33,12 @@ class HealCommand extends Command implements PluginOwned {
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
 
         if (!$sender instanceof Player) {
-            $sender->sendMessage("not_ingame_health");
+            $sender->sendMessage($this->config->get("not_ingame_health"));
             return true;
         }
 
         if (!$sender->hasPermission("basichealer.heal")) {
-            $sender->sendMessage("no_permission_health");
+            $sender->sendMessage($this->config->get("no_permission_health"));
             return true;
         }
 
