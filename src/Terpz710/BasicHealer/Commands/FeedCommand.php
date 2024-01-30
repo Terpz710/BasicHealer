@@ -37,7 +37,7 @@ class FeedCommand extends Command implements PluginOwned {
         }
 
         if (!$sender->hasPermission("basichealer.feed")) {
-            $sender->sendMessage("§cYou don't have permission to use this command!");
+            $sender->sendMessage("no_permission");
             return true;
         }
 
@@ -54,12 +54,12 @@ class FeedCommand extends Command implements PluginOwned {
                 $this->config->get("feed_title_stay"),
                 $this->config->get("feed_title_fade_out")
             );
-            $feedMessage = $this->config->get("feed_message", "§f(§a!§f) You have been §bfed§f!");
+            $feedMessage = $this->config->get("feed_message");
             if ($feedMessage !== null) {
                 $sender->sendMessage($feedMessage);
             }
         } else {
-            $fullHungerMessage = $this->config->get("full_hunger_message", "§l§f(§c!§f)§r§f You are not hungry!");
+            $fullHungerMessage = $this->config->get("full_hunger_message");
             $sender->sendMessage($fullHungerMessage);
         }
 
